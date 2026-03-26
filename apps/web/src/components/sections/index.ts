@@ -1,0 +1,10 @@
+export { Nav } from "./nav";
+export { Hero } from "./hero";
+export { PainPoints } from "./pain-points";
+export { SolutionFlow } from "./solution-flow";
+export { Outcomes } from "./outcomes";
+export { UseCases } from "./use-cases";
+export { LeadFormSection } from "./lead-form-section";
+export { Faq } from "./faq";
+export { FinalCta } from "./final-cta";
+export { Footer } from "./footer";

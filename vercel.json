@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm --prefix apps/web run build",
+  "installCommand": "npm --prefix apps/web install",
+  "outputDirectory": "apps/web/.next",
+  "devCommand": "npm --prefix apps/web run dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
