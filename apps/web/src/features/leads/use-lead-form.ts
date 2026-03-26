@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import type { LeadFormData, LeadFormFieldErrors } from "./form-schema";
 import { validateLeadForm } from "./form-schema";
 import type { LeadResponse } from "./contracts";
+import { trackFormSubmitted, trackFormFailed } from "@/features/tracking/client";
 
 export type LeadFormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -59,8 +60,10 @@ export function useLeadForm() {
           submitError: null,
           response: null,
         });
-        // Focus first errored field
+        // Track validation failure
         const firstErrorField = Object.keys(validation.errors)[0];
+        trackFormFailed("primary-lead-form", firstErrorField);
+        // Focus first errored field
         if (firstErrorField) {
           const el = form.querySelector<HTMLElement>(`[name="${firstErrorField === "consentMarketing" ? "consent.marketing" : firstErrorField}"]`);
           el?.focus();
@@ -108,6 +111,9 @@ export function useLeadForm() {
 
         const data: LeadResponse = await res.json();
 
+        // Track successful submission
+        trackFormSubmitted("primary-lead-form", data.status);
+
         setState({
           status: "success",
           fieldErrors: {},
@@ -118,6 +124,9 @@ export function useLeadForm() {
         if (err instanceof DOMException && err.name === "AbortError") {
           return; // Silently ignore aborted requests
         }
+
+        // Track submission error
+        trackFormFailed("primary-lead-form");
 
         setState({
           status: "error",

@@ -1,3 +1,7 @@
+"use client";
+
+import { trackCtaClick } from "@/features/tracking/client";
+
 export function Nav() {
   return (
     <nav className="nav" role="navigation" aria-label="Main navigation">
@@ -33,7 +37,11 @@ export function Nav() {
               </a>
             </li>
           </ul>
-          <a href="#lead-form" className="btn btn--primary">
+          <a
+            href="#lead-form"
+            className="btn btn--primary"
+            onClick={() => trackCtaClick("nav", "Dat lich demo quy trinh")}
+          >
             Dat lich demo quy trinh
           </a>
         </div>

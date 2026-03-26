@@ -1,3 +1,7 @@
+"use client";
+
+import { trackCtaClick } from "@/features/tracking/client";
+
 const proofBullets = [
   "Thu lead tap trung tu landing page va Facebook",
   "Thong bao va handoff cho sale nhanh",
@@ -28,10 +32,18 @@ export function Hero() {
             cho sale va theo doi conversion trong mot quy trinh co the do luong.
           </p>
           <div className="hero__ctas">
-            <a href="#lead-form" className="btn btn--primary">
+            <a
+              href="#lead-form"
+              className="btn btn--primary"
+              onClick={() => trackCtaClick("hero", "Dat lich demo quy trinh")}
+            >
               Dat lich demo quy trinh
             </a>
-            <a href="#lead-form" className="btn btn--ghost-inverse">
+            <a
+              href="#lead-form"
+              className="btn btn--ghost-inverse"
+              onClick={() => trackCtaClick("hero", "Nhan tu van giai phap")}
+            >
               Nhan tu van giai phap
             </a>
           </div>
