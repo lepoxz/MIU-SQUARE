@@ -1,34 +1,52 @@
 # MIU SQUARE Implementation Plan
 
-## Muc tieu thin slice
+## Muc tieu dot nay
 
-Ship landing page co lead form hoat dong, luu lead co trace id, phat event tracking co ban, va day sang workflow automation de thong bao sale.
+Chuyen workspace hien tai tu thin-slice landing page sang website da trang theo spec board gui trong `ANG-50`, dong thoi giu nhip review nhanh "xong chang nao xem chang do" va mo duong deploy cong khai som.
 
-## Workstreams
+## Checkpoint giao hang
 
-| Workstream | Muc tieu | Dau ra |
-|------------|----------|--------|
-| Frontend | Hoan thien hero, sections va lead form UI | Trang landing page responsive hook vao `POST /api/leads` |
-| Backend | Noi route handlers voi persistence va auth noi bo | Prisma schema, migration, service layer, webhook security |
-| Automation | Nhan lead da validate va fan-out thong bao | n8n workflow doc `traceId`, gui Slack/Zalo/email |
-| Tracking | Co event naming on dinh cho MVP | Tracker client, UTM capture, dashboard funnel co ban |
+### Checkpoint 1 - Khoa cau truc va visual direction
 
-## Trinh tu de xuat
+- Chot IA 6 trang va nav/footer chung
+- Chot visual system mau do trang, typography, hero direction, floating contact
+- Chot mapping asset: logo, anh demo, khu nao dung placeholder
 
-1. Frontend agent dung contracts trong `docs/contracts/lead-ingestion.md` va `docs/contracts/tracking.md` de lap form submit.
-2. Backend hoan thien Prisma schema `Lead`, `LeadEvent`, `CampaignAttribution` va luu du lieu truoc khi goi workflow.
-3. Automation engineer dung `traceId` lam khoa correlation cho alert va retry.
-4. Product Owner chot fields MVP cua form va SLA handoff cho sale.
+### Checkpoint 2 - Scaffold website va route shell
 
-## Scope MVP can Product Owner dong bo
+- Dung `apps/web` thanh route group `(site)` va page shell cho 6 trang
+- Tach shared components: nav, footer, hero, floating contact, form shell
+- Giu build/test chay duoc
 
-- Truong bat buoc cua lead form: `fullName`, `phone`, `consent.marketing`.
-- Kenh thong bao uu tien khi co lead moi: Slack, Zalo hay email.
-- Dinh nghia `qualified lead` de dashboard phan loai sau intake.
-- Muc tieu conversion ban dau de quyet dinh event tracking can giu lai.
+### Checkpoint 3 - Lead flow va deploy cong khai
 
-## No tech debt visible
+- Noi form tu van chinh vao route submit
+- Bat tracking can ban cho page/CTA/form
+- Dua len URL public de board review
 
-- Chua co persistence layer; route handlers hien tra `202` de unblock frontend.
-- Chua co auth/rate limit cho ingestion endpoint; can them truoc khi public traffic.
-- Chua co package lock, can chay install mot lan trong workspace execution de co CI cache on dinh.
+### Checkpoint 4 - Editable content
+
+- Sau khi board duyet layout: them Sanity schema va data bridge cho text/anh
+- Ghi ro asset nao editable, asset nao la static brand asset
+
+## Phan cong cap cong ty
+
+| Vai tro | Trach nhiem |
+|--------|-------------|
+| CEO | Khoa huong, cap nhat docs, tao backlog thuc thi, quan ly review checkpoints |
+| UI Designer | Chot visual direction, page composition, asset placement, component states |
+| CMO | Chot messaging va copy cho tung trang theo brief moi |
+| CTO | Tai cau truc `apps/web`, noi form/tracking, va thiet lap deployment |
+| Product Owner | Tach backlog thanh issue nho theo checkpoint va giu nhip feedback |
+
+## Phu thuoc chinh
+
+- Board can tiep tuc cung cap logo/anh demo final neu muon thay placeholder.
+- CTO chi nen dua CMS vao sau khi UI va copy duoc khoa.
+- Deployment uu tien Vercel vi repo da co dau vet config san.
+
+## Rui ro can quan ly
+
+- Repo dang co thin-slice cu ve landing page lead gen; neu sua thang vao code ma khong khoa IA truoc se drift tiep.
+- Them CMS qua som de lam cham chang demo.
+- Public deployment neu thieu env form notification can van cho board mot ban review read-only thay vi cho ca du an dung lai.

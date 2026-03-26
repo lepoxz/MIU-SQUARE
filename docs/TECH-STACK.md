@@ -1,34 +1,36 @@
-# Tech Stack
+# MIU SQUARE Tech Stack
 
-## Chosen Stack
+## Stack da khoa cho dot doi cau truc
 
-| Layer | Technology | Version | Notes |
-|-------|------------|---------|-------|
-| Language | TypeScript | 5.x | Dong bo frontend, backend va automation scripts |
-| Framework | Next.js | 16.x | Phu hop landing page, dashboard noi bo va API routes nhe; tranh baseline tren nhanh de giam rui ro security |
-| Automation | n8n | latest stable | Dieu phoi workflow Facebook lead intake va notification |
-| Database | PostgreSQL | 16 | Luu lead, campaign snapshot va audit log |
-| ORM | Prisma | 6.x | Schema ro rang, migration de quan ly |
-| Hosting | Vercel + Railway | current | Vercel cho web, Railway cho Postgres va worker nho |
-| CI/CD | GitHub Actions | current | Lint, test, deploy tu dong |
+| Lop | Cong nghe | Vai tro |
+|-----|-----------|---------|
+| Frontend framework | Next.js 15 App Router | Public website, route groups, API routes |
+| Language | TypeScript 5.x | Dong bo UI, validation, integration helpers |
+| UI styling | Tailwind CSS | Xay layout nhanh, giu token design nhat quan |
+| UI primitives | shadcn/ui | Form controls, dialog, accordion va primitive tai su dung |
+| Motion | Framer Motion | Scroll reveal va micro-interaction theo brief |
+| Validation | Zod + React Hook Form | Form tu van va env validation |
+| CMS phase 2 | Sanity.io | Board tu thay text/anh sau khi layout da khoa |
+| Email delivery | Resend | Gui lead notification cho admin |
+| Chat notification | Telegram Bot API | Ban lead nhanh vao kenh admin |
+| Hosting | Vercel | Preview + public deployment cho board review |
+| Testing | Vitest + Next build | Bao ve contracts, route logic va build health |
 
-## Rationale
+## Nguyen tac chon stack
 
-Chon stack "boring but reliable" de ship nhanh MVP cho agency automation. TypeScript giam chi phi chuyen context giua web app, API va workflow glue code. Next.js du linh hoat cho landing page, admin dashboard va webhook endpoints. PostgreSQL + Prisma giup luu du lieu lead/campaign ro rang ngay tu giai doan som. n8n la lop tu dong hoa phu hop DNA cua agency.
+- Uu tien nhung cong cu phu hop viec ship website nhanh va sua lien tuc theo feedback.
+- Khong dua database hay back-end nang vao dot dau neu chua phuc vu truc tiep review loop.
+- Giu kha nang mo rong CMS va backend, nhung khong de no lam cham chang demo dau tien.
 
-## Trade-offs
+## Thu tu kich hoat cong nghe
 
-- Khong chon stack Python-first vi team hien tai duoc bootstrap quanh web/product flow, khong phai data-heavy backend.
-- Khong chon microservices giai doan dau vi chi lam tang chi phi van hanh.
-- Khong dua Facebook automation logic het vao n8n; cac logic can kiem soat version va test se de o app code.
+1. `Next.js + Tailwind + shadcn/ui` de khoa bo khung giao dien.
+2. `Framer Motion` de them chuyen dong co chu dich sau khi IA va layout on.
+3. `Resend + Telegram` cho form tu van.
+4. `Sanity` sau khi board xac nhan page structure, asset slots va copy direction.
 
-## Key Dependencies
+## Trade-off da chap nhan
 
-| Package | Purpose | License |
-|---------|---------|---------|
-| `next` | Web app va API surface | MIT |
-| `react` | UI layer cho dashboard va landing page | MIT |
-| `prisma` | ORM, schema va migration | Apache-2.0 |
-| `@prisma/client` | Database client runtime | Apache-2.0 |
-| `zod` | Request validation va config schema | MIT |
-| `pino` | Structured logging | MIT |
+- Chua dua database vao dot dau: doi lai deployment don gian hon va review nhanh hon.
+- Chua bat buoc Sanity ngay tu dau: giam overhead schema va content modeling truoc khi wireframe duoc khoa.
+- Van giu route tracking rieng: de khong mat luong do luong khi public demo len traffic that.
