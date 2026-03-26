@@ -844,7 +844,14 @@ ul, ol {
   color: var(--color-brand-primary);
 }
 
+/* --- Mobile Sticky CTA --- */
+.mobile-sticky-cta {
+  display: none;
+}
+
 /* --- Responsive --- */
+
+/* Tablet: 768px - 1023px */
 @media (max-width: 1023px) {
   .hero__inner {
     grid-template-columns: 1fr;
@@ -875,8 +882,13 @@ ul, ol {
     grid-template-columns: 1fr;
     gap: var(--space-10);
   }
+
+  .type-display {
+    font-size: 42px;
+  }
 }
 
+/* Mobile: < 768px */
 @media (max-width: 767px) {
   :root {
     --space-20: 48px;
@@ -888,12 +900,70 @@ ul, ol {
     height: 64px;
   }
 
+  /* Mobile nav drawer — slides down from nav */
   .nav__links {
     display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border-soft);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2) 0;
+    z-index: 99;
+  }
+
+  .nav__links--open {
+    display: flex;
+  }
+
+  .nav__links .nav__link {
+    display: block;
+    padding: var(--space-4) var(--space-6);
+    font-size: 16px;
+    border-bottom: 1px solid var(--color-border-soft);
+  }
+
+  .nav__links li:last-child .nav__link {
+    border-bottom: none;
+  }
+
+  /* Show CTA inside mobile drawer */
+  .nav__links-cta-mobile {
+    display: block;
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .nav__links-cta-mobile .btn {
+    width: 100%;
+  }
+
+  /* Hide desktop CTA on mobile */
+  .nav__cta-desktop {
+    display: none;
+  }
+
+  /* Mobile hamburger button */
+  .nav__hamburger {
+    display: flex;
+  }
+
+  /* Nav overlay for closing drawer */
+  .nav__overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 64px;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .hero__headline {
     font-size: 30px;
+    line-height: 1.15;
   }
 
   .hero__subheadline {
@@ -908,8 +978,16 @@ ul, ol {
     width: 100%;
   }
 
+  .hero__flow-card {
+    padding: var(--space-6);
+  }
+
   .section__heading {
     font-size: 28px;
+  }
+
+  .section__desc {
+    font-size: 16px;
   }
 
   .grid-3,
@@ -920,6 +998,16 @@ ul, ol {
 
   .card {
     padding: var(--space-6);
+  }
+
+  .card__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--space-4);
+  }
+
+  .final-cta {
+    padding: var(--space-12) 0;
   }
 
   .final-cta__heading {
@@ -934,10 +1022,97 @@ ul, ol {
   .btn--primary,
   .btn--secondary {
     height: 44px;
+    font-size: 15px;
   }
 
   .container {
     width: calc(100% - var(--space-10));
+  }
+
+  /* Lead form card on mobile needs more breathing room */
+  .lead-form-card {
+    padding: var(--space-6);
+  }
+
+  .lead-form-section {
+    padding: var(--space-12) 0;
+  }
+
+  /* FAQ mobile polish */
+  .faq-item__question {
+    padding: var(--space-4) var(--space-5);
+    font-size: 15px;
+  }
+
+  .faq-item__answer {
+    padding: 0 var(--space-5) var(--space-4);
+    font-size: 15px;
+  }
+
+  /* Mobile sticky CTA bar — visible after scrolling past hero */
+  .mobile-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    padding: var(--space-3) var(--space-5);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--color-border-soft);
+    box-shadow: 0 -4px 16px rgba(16, 32, 51, 0.08);
+    justify-content: center;
+  }
+
+  .mobile-sticky-cta .btn {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Add bottom padding to footer so sticky CTA doesn't overlap */
+  .footer {
+    padding-bottom: calc(var(--space-12) + 60px);
+  }
+}
+
+/* Hamburger button default hidden on desktop */
+.nav__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  font-size: 24px;
+}
+
+/* Mobile-only CTA inside nav drawer — hidden on desktop */
+.nav__links-cta-mobile {
+  display: none;
+}
+
+/* Desktop CTA in nav */
+.nav__cta-desktop {
+  display: inline-flex;
+}
+
+/* Nav overlay — only used on mobile when drawer is open */
+.nav__overlay {
+  display: none;
+}
+
+/* Wide: 1280px+ — only expand whitespace */
+@media (min-width: 1280px) {
+  .hero__inner {
+    gap: var(--space-16);
+  }
+
+  .hero__headline {
+    font-size: 56px;
   }
 }
 

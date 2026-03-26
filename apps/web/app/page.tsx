@@ -12,6 +12,7 @@ import {
 } from "@/components/sections";
 import { PageViewTracker } from "@/components/page-view-tracker";
 import { FormViewedTracker } from "@/components/form-viewed-tracker";
+import { MobileStickyCta } from "@/components/mobile-sticky-cta";
 
 export default function HomePage() {
   return (
@@ -30,6 +31,7 @@ export default function HomePage() {
         <FinalCta />
       </main>
       <Footer />
+      <MobileStickyCta />
     </>
   );
 }
