@@ -2,55 +2,58 @@
 
 ## Pham vi
 
-Design system nay la bo nen nho cho dot 1: mot landing page responsive, lead capture form, CTA lap lai, cac block noi dung va handoff cho frontend engineer. Uu tien la toc do va tinh dong bo, khong mo rong thanh full component library.
+Design system nay phuc vu chang 1 cua website da trang MIU SQUARE gom 6 route public, shared navigation/footer, 1 form tu van chinh va floating quick contact. Day la bo quy tac du de CTO scaffold nhanh, khong mo rong thanh design system enterprise.
 
 ## Nguyen tac he thong
 
-- Uu tien conversion truoc trang tri
-- Mot man hinh, mot hierarchy ro
-- Token duoc goi bang ten, khong truyen hex truc tiep vao component
-- Khoang trang va ty le phai tao nhip dieu tin cay, khong chat chu
-- Moi component phai co state co the implement ngay
+- Hinh anh va headline lon la trung tam, component lui ve vai tro ho tro
+- Mau do chi dong vai tro dieu huong va chot hanh dong, khong phu kin toan giao dien
+- Moi component phai co trang thai mobile/desktop ro rang
+- Token duoc goi ten theo vai tro, khong truyen hex truc tiep vao component
+- Uu tien pattern de review nhanh bang placeholder truoc khi co asset final
 
-## Color Palette
+## Color Tokens
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `color-bg-page` | `#F5F7FA` | Nen tong trang |
-| `color-bg-surface` | `#FFFFFF` | Card, form, nav |
-| `color-bg-hero` | `#102033` | Hero, dark bands |
-| `color-text-primary` | `#17212B` | Body text chinh |
-| `color-text-secondary` | `#5B6B7A` | Body text phu |
-| `color-text-inverse` | `#FFFFFF` | Text tren nen dark |
-| `color-brand-primary` | `#102033` | Nut secondary dark, heading key |
-| `color-brand-secondary` | `#36506B` | Divider nhan manh, icon, subheading |
-| `color-brand-accent` | `#3ECF8E` | Badge, stat positive, nhan "fast/start" |
-| `color-action-primary` | `#FF6B57` | Nut CTA chinh |
-| `color-action-primary-hover` | `#E85A47` | Hover CTA |
-| `color-border-soft` | `#D9E1E8` | Input border, card border |
-| `color-border-strong` | `#AAB7C3` | Focus ring phu, card emphasis |
-| `color-success` | `#1F9D68` | Thanh cong |
-| `color-error` | `#D64545` | Loi |
-| `color-warning` | `#C98512` | Canh bao |
+| `color-bg-page` | `#FFFFFF` | Nen tong trang |
+| `color-bg-alt` | `#F6F3F1` | Section xen ke, band content |
+| `color-bg-dark` | `#111111` | Hero, footer, CTA dark |
+| `color-bg-card` | `#FFFFFF` | Card, form surface, modal |
+| `color-text-primary` | `#111111` | Heading, body chinh |
+| `color-text-secondary` | `#5F5A57` | Body phu, meta |
+| `color-text-inverse` | `#FFFFFF` | Text tren dark/red |
+| `color-brand-primary` | `#E30613` | CTA chinh, active nav, underline |
+| `color-brand-primary-hover` | `#B1000F` | Hover CTA chinh |
+| `color-brand-soft` | `#FFE5E7` | Badge nen nhat, hover chip |
+| `color-accent-pink` | `#FF6A7A` | Highlight nho, event tag |
+| `color-accent-gold` | `#F2B544` | Icon/label nhan manh |
+| `color-border-soft` | `#DDD6D1` | Input, card, divider |
+| `color-border-strong` | `#C4BAB4` | Card active, sticky nav border |
+| `color-success` | `#1F8F5F` | Success state |
+| `color-error` | `#C62828` | Error state |
+| `color-overlay-dark` | `rgba(17, 17, 17, 0.58)` | Overlay tren anh |
 
-## Typography
+## Typography Tokens
 
 | Token | Font | Size | Weight | Usage |
 |-------|------|------|--------|-------|
-| `type-display` | Space Grotesk | 56px | 700 | Hero desktop |
-| `type-h1` | Space Grotesk | 48px | 700 | Hero nho / page title |
-| `type-h2` | Space Grotesk | 32px | 700 | Tieu de section |
-| `type-h3` | Space Grotesk | 20px | 700 | Card title |
-| `type-body-lg` | Manrope | 18px | 400 | Intro paragraph |
+| `type-display-xl` | Be Vietnam Pro | 72px | 800 | Homepage hero desktop |
+| `type-display-lg` | Be Vietnam Pro | 56px | 700 | Page hero desktop |
+| `type-h1` | Be Vietnam Pro | 48px | 700 | Tieu de trang trong |
+| `type-h2` | Be Vietnam Pro | 34px | 700 | Tieu de section |
+| `type-h3` | Be Vietnam Pro | 22px | 700 | Card title |
+| `type-body-lg` | Manrope | 18px | 500 | Intro paragraph |
 | `type-body` | Manrope | 16px | 400 | Body mac dinh |
-| `type-body-strong` | Manrope | 16px | 600 | Labels, nav active |
-| `type-caption` | Manrope | 14px | 500 | Helper text, eyebrow |
-| `type-micro` | IBM Plex Mono | 12px | 500 | Meta, stat prefix |
+| `type-body-strong` | Manrope | 16px | 600 | Label, nav active, button text |
+| `type-caption` | Manrope | 14px | 500 | Meta, helper text |
+| `type-micro` | IBM Plex Mono | 12px | 500 | Eyebrow, tag, section index |
 
 ## Line Height
 
-- Display/H1: `1.1`
-- H2/H3: `1.2`
+- Display: `1.02-1.08`
+- H1/H2: `1.12`
+- H3: `1.2`
 - Body: `1.6`
 - Caption: `1.5`
 - Micro: `1.4`
@@ -61,36 +64,40 @@ Base unit: `4px`
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `space-1` | `4px` | Khoang cach icon-label rat nho |
-| `space-2` | `8px` | Khoang cach text stack nho |
-| `space-3` | `12px` | Input internal gap |
-| `space-4` | `16px` | Padding nho, stack mac dinh |
-| `space-5` | `20px` | Card content compact |
-| `space-6` | `24px` | Section group, form field gap |
-| `space-8` | `32px` | Card lon, gutter mobile |
-| `space-10` | `40px` | Hero block compact |
+| `space-1` | `4px` | Gap icon nho |
+| `space-2` | `8px` | Stack micro |
+| `space-3` | `12px` | Chip, badge, nav item gap |
+| `space-4` | `16px` | Stack mac dinh |
+| `space-5` | `20px` | Card compact |
+| `space-6` | `24px` | Form field gap |
+| `space-8` | `32px` | Gutter mobile, card padding vua |
+| `space-10` | `40px` | Hero content gap nho |
 | `space-12` | `48px` | Section spacing mobile |
 | `space-16` | `64px` | Section spacing tablet |
 | `space-20` | `80px` | Section spacing desktop |
-| `space-24` | `96px` | Hero spacing desktop |
+| `space-24` | `96px` | Hero/page spacing desktop |
+| `space-32` | `128px` | Homepage hero lon, section interlude |
 
 ## Border Radius
 
-- `radius-sm`: `10px`
-- `radius-md`: `16px`
-- `radius-lg`: `24px`
+- `radius-xs`: `8px`
+- `radius-sm`: `12px`
+- `radius-md`: `18px`
+- `radius-lg`: `28px`
+- `radius-xl`: `40px`
 - `radius-pill`: `999px`
 
 ## Shadow
 
-- `shadow-sm`: `0 8px 24px rgba(16, 32, 51, 0.06)`
-- `shadow-md`: `0 18px 40px rgba(16, 32, 51, 0.10)`
-- `shadow-focus`: `0 0 0 4px rgba(62, 207, 142, 0.22)`
+- `shadow-sm`: `0 10px 24px rgba(17, 17, 17, 0.06)`
+- `shadow-md`: `0 20px 48px rgba(17, 17, 17, 0.10)`
+- `shadow-cta`: `0 14px 28px rgba(227, 6, 19, 0.22)`
+- `shadow-focus`: `0 0 0 4px rgba(227, 6, 19, 0.18)`
 
 ## Grid va Container
 
-- Max container desktop: `1200px`
-- Inner content width text-heavy: `720px`
+- Max container desktop: `1280px`
+- Noi dung text-heavy: `760px`
 - Gutter desktop: `32px`
 - Gutter tablet: `24px`
 - Gutter mobile: `20px`
@@ -98,179 +105,172 @@ Base unit: `4px`
 - Grid tablet: `8 columns`
 - Grid mobile: `4 columns`
 
-## Responsive Breakpoints
+## Breakpoints
 
 | Name | Min width | Notes |
 |------|-----------|-------|
-| `mobile` | `0px` | Mac dinh cho quang cao do ve |
-| `tablet` | `768px` | Section co the chuyen sang 2 cot |
-| `desktop` | `1024px` | Hero 2 cot, card grid 3 cot |
-| `wide` | `1280px` | Chi mo rong khoang tho, khong tang line length |
+| `mobile` | `0px` | Uu tien traffic truy cap bang dien thoai |
+| `tablet` | `768px` | Bat dau tach 2 cot cho section |
+| `desktop` | `1024px` | Hero split, nav day du, card grid |
+| `wide` | `1440px` | Mo rong khoang tho, khong tang do dai dong |
 
-## Copy va CTA lock
+## Shared Component Patterns
 
-- CTA chinh xuyen suot trang: `Dat lich demo quy trinh`
-- CTA phu: `Nhan tu van giai phap`
-- Hero eyebrow nen uu tien mot trong 2 huong:
-- `Lead Facebook -> pipeline do luong duoc`
-- `Automation-first lead operations`
-- H1 phai giu dung headline da chot trong brand doc
+### Primary Button
 
-## Component Patterns
-
-### Buttons
-
-#### Primary Button
-
-- Fill: `color-action-primary`
+- Fill: `color-brand-primary`
 - Text: `color-text-inverse`
 - Radius: `radius-pill`
-- Height: `48px` desktop, `44px` mobile
-- Horizontal padding: `24px`
-- Min width: `184px` cho desktop hero CTA
+- Height: `52px` desktop, `48px` mobile
+- Padding ngang: `24px`
 - States:
-- default: coral fill
-- hover: `color-action-primary-hover`
-- active: giam sang 4%
-- focus: them `shadow-focus`
-- disabled: opacity `0.45`, cursor `not-allowed`
+- default: do chinh
+- hover: `color-brand-primary-hover` + `shadow-cta`
+- active: giam sang 6%
+- focus: `shadow-focus`
+- disabled: opacity `0.45`
 
-#### Secondary Button
+### Secondary Button
 
 - Fill: `#FFFFFF`
-- Text: `color-brand-primary`
+- Text: `color-text-primary`
 - Border: `1px solid color-border-soft`
-- Dung cho CTA phu trong hero hoac nav
+- Hover: border dam hon + nen `#F9F6F4`
+- Dung cho CTA phu, nav CTA phu, card actions
 
-#### Ghost Button
+### Dark Button
 
-- Khong fill
-- Text: `color-brand-primary` hoac `color-text-inverse` tuy nen
-- Chi dung trong nav/phu, khong dung lam CTA chinh
+- Fill: `color-bg-dark`
+- Text: `color-text-inverse`
+- Dung tren section sang khi can action phu co trong luong cao
 
-### Inputs
+### Text Link
 
-#### Text Input
+- Mau mac dinh: `color-text-primary`
+- Hover: them underline do 2px hoac doi sang `color-brand-primary`
+- Khong dung mau do don le lam link trong doan body dai
+
+### Input
 
 - Height: `52px`
-- Radius: `16px`
+- Radius: `18px`
 - Border: `1px solid color-border-soft`
-- Background: `#FFFFFF`
-- Text: `color-text-primary`
-- Placeholder: `#7F8C98`
-- Focus: border `color-brand-accent` + `shadow-focus`
-- Error: border `color-error`, helper text do
-- Required cho MVP: `fullName`, `phone`
+- Padding ngang: `16px`
+- Placeholder: `#8B827D`
+- Focus: vien do + `shadow-focus`
+- Error: vien `color-error` + helper text do
 
-#### Textarea
+### Textarea
 
-- Min height: `120px`
-- Khong resize ngang
-- Padding trong: `16px`
-- Dung cho field `notes`
+- Min height: `132px`
+- Radius: `18px`
+- Resize doc cho phep, resize ngang tat
 
-#### Checkbox
+### Select
+
+- Dong style voi input
+- Icon dropdown canh phai, mau `color-text-secondary`
+
+### Checkbox
 
 - Kich thuoc: `20px`
-- Checked fill: `color-brand-primary`
-- Dung cho consent `consent.marketing`
+- Checked: fill do, check trang
+- Khong duoc chi show vien ma khong co label text
 
-### Cards
+### Surface Card
 
-#### Service Card
-
-- Background: `#FFFFFF`
+- Background: `color-bg-card`
 - Border: `1px solid color-border-soft`
-- Radius: `24px`
-- Padding: `32px`
-- Dung cho 3-4 loi ich chinh
+- Radius: `radius-lg`
+- Shadow: `shadow-sm`
+- Padding: `24px` mobile, `32px` desktop
 
-#### Metric Card
+### Editorial Card
 
-- Background: `#FFFFFF`
-- Border trai 4px `color-brand-accent`
-- Dung cho stat, proof point, timeline
+- Nen: `color-bg-dark` hoac anh + overlay
+- Text: `color-text-inverse`
+- Dung cho zone highlight, su kien noi bat, hero pull-quote
 
-#### Testimonial Card
+### Image Tile
 
-- Background: `#102033`
-- Text: `#FFFFFF`
-- Accent line hoac badge mint
+- Ty le uu tien: `4:5`, `3:4`, `16:10`
+- Radius: `radius-lg`
+- Neu placeholder: dung block mau `#ECE7E3` + nhan dang ro vai tro asset
 
-### Navigation
+## Navigation
 
-- Sticky top sau 24px scroll
-- Chieu cao: `72px` desktop, `64px` mobile
-- Gom wordmark trai, CTA phai
-- Mobile: hamburger + CTA thu gon, khong nhieu hon 1 action chinh
+- Desktop:
+- chieu cao `84px`
+- nen trang trong 16px scroll dau, sau do sticky voi nen trang mo 94% + blur nhe
+- logo trai, menu giua/phai, CTA hop tac o cuoi
+- active state dung underline do 2px
+- Mobile:
+- chieu cao `68px`
+- menu drawer fullscreen tu phai vao
+- CTA chinh nam trong drawer va co the lap lai o footer
 
-### Section Pattern
+## Footer
 
-- Moi section co:
-- eyebrow hoac micro label
-- heading ngan
-- 1 doan copy ho tro toi da 2-3 dong
-- mot khoi noi dung chinh: grid, list, form, hoac proof strip
+- Nen `color-bg-dark`
+- Gom logo, link dieu huong, thong tin lien he, social/contact
+- Co micro row cho chinh sach va copyright
 
-## Page Sections cho dot 1
+## Floating Quick Contact
 
-| Section ID | Muc dich | Pattern |
-|------------|----------|---------|
-| `hero` | Chot van de + gia tri + CTA | 2 cot desktop, stack mobile |
-| `pain-points` | Goi dung no dau van hanh | Grid 3 card |
-| `solution-flow` | Giai thich cach MIU SQUARE xu ly lead | Grid 4 card theo flow |
-| `outcomes` | Noi ve ket qua/loi ich | Metric + bullet strip |
-| `use-cases` | Tu nhan dien dung nhom | 2x2 cards hoac tabs card |
-| `lead-form` | Chuyen doi chinh | Intro + form card |
-| `faq` | Xu ly objection | Accordion |
-| `final-cta` | Chot hanh dong cuoi | Dark/coral band |
+- Vi tri mac dinh: phai duoi
+- Desktop: stack doc 3 nut, cach mep duoi `24px`, cach mep phai `24px`
+- Mobile: stack doc gon hon, cach mep duoi `88px` de tranh de len sticky CTA neu co
+- Thu tu: Messenger, Zalo, WhatsApp
+- Nut:
+- hinh tron `52px` desktop, `48px` mobile
+- co nhan label tooltip desktop
+- co state hover nhich len 2px
+- bat buoc co aria-label ro tung kenh
 
-## Hanh vi chuyen dong
+## Form Tu Van Chinh
 
-- Motion ngan, quyet doan
-- Duration: `180ms` cho hover/focus, `280ms` cho reveal section
-- Easing: `ease-out`
-- Tranh animation bay nhay, parallax manh hoac counter qua da
+- Form chinh dat o trang `/dich-vu`
+- Field chang 1:
+- `fullName`
+- `phone`
+- `email`
+- `interestType`
+- `message`
+- Trang thai:
+- default
+- focus
+- error inline
+- submitting
+- success inline
+- Layout:
+- desktop 2 cot cho field ngan, textarea full width
+- mobile 1 cot
 
-## Brand Guidelines
+## Motion
 
-- Nen uu tien canh thang, card bo goc lon, duong vien mo
-- Khong dung minh hoa neon, 3D bong bay hay glassmorphism nang
-- Do hoa background chi la ho tro, khong canh tranh voi copy/CTA
+- Hover/focus: `160-180ms`, `ease-out`
+- Reveal section: `260-320ms`, translateY nhe `8-16px`
+- Drawer/menu: `240ms`
+- Tranh parallax manh, auto-carousel kho nhanh, counter nhay lien tuc
 
 ## Accessibility
 
 - Body text toi thieu `16px`
-- Nut va input target toi thieu `44px`
-- Khong truyen thong tin chi bang mau
-- Focus ring bat buoc nhin thay tren keyboard navigation
-- Form error phai co text cu the, khong chi vien do
+- Nut va icon tap target toi thieu `44px`
+- Focus ring bat buoc thay ro
+- Moi card anh quan trong phai co alt text hoac nhan placeholder co nghia
+- Trang thai active/selected khong chi phan biet bang mau
 
-## Tracking Hooks cho UI
+## Handoff cho CTO
 
-UI can phat event theo contract MVP hien tai trong `docs/contracts/tracking.md`:
-
-- `page_view` khi vao trang
-- `cta_clicked` cho moi CTA chinh/phu
-- `lead_form_viewed` khi form vao viewport hoac user bat dau tuong tac
-- `lead_form_submitted` khi submit thanh cong
-- `lead_form_failed` khi validate/submission loi
-
-Properties toi thieu de UI truyen vao event:
-
-- `section_id`
-- `cta_label`
-- `form_id`
-- `submission_status`
-- thong tin UTM neu da capture duoc
-
-## Handoff cho Engineer
-
-- Implement bang token CSS/TS tu dung ten tren
-- Uu tien xay 5 primitive dau tien:
-- container/section
+- Tao token CSS theo ten trong tai lieu nay
+- Scaffold 7 primitive truoc:
+- container
+- section shell
 - button
-- input
-- card
-- badge/stat chip
-- Copy dot 1 da khoa. Engineer khong tu doi CTA/section order neu khong co cap nhat tu designer/CMO
+- input/select/textarea/checkbox
+- nav
+- footer
+- floating quick contact
+- Anh that chua co thi dung placeholder dung ti le va ghi ro key asset
+- Khong tu pha them palette phu ngoai cac token tren neu chua co cap nhat tu designer

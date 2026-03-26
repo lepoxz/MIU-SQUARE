@@ -2,185 +2,178 @@
 
 ## Trang thai
 
-Tai lieu nay la ban handoff cuoi cho dot 1, da dong bo voi messaging trong `docs/LANDING-PAGE-MESSAGING.md`, scope MVP da duoc chot tren `ANG-17` va nen ky thuat trong `docs/IMPLEMENTATION-PLAN.md`.
+Tai lieu nay thay the huong landing page cu va khoa lai nhan dien cho website MIU SQUARE theo brief board trong `ANG-50#document-website-miusquare`. MIU SQUARE duoc the hien nhu mot to hop da nang hien dai, tre, co kha nang thu hut khach tham quan va doi tac kinh doanh.
 
 ## Brand Vision
 
-MIU SQUARE duoc dinh vi nhu mot doi tac tang truong so cho SME va local business: ro rang, nhanh, hien dai va dang tin cay. Cam xuc can tao ra tren landing page:
+MIU SQUARE la diem den ket noi mua sam, am thuc, vui choi va he sinh thai livestream trong cung mot trai nghiem co chu dich. Website phai tao cam giac:
 
-- Chuyen nghiep nhung khong lanh lung
-- Hieu qua va co kha nang hanh dong ngay
-- Huong ket qua, uu tien lead va doanh thu
-- Don gian de tin tuong, don gian de lien he
+- Nang luong, tre trung, co nhip
+- Chuyen nghiep nhung khong lanh
+- Noi bat va de nho ngay tu man hinh dau
+- Du tin cay de thuyet phuc doi tac hop tac va khach hang ghe tham quan
 
 ## Thuoc tinh thuong hieu
 
-- Practical
-- Direct
-- Growth-oriented
-- Trustworthy
-- Fast-moving
+- Bold
+- Urban
+- Commercial
+- Social
+- Conversion-aware
 
-## Khach hang muc tieu chot cho dot 1
+## Doi tuong uu tien
 
-- SME va local service business dang chay Facebook Ads de lay lead
-- Agency service nho dang van hanh lead cho client va can mot flow lap lai duoc
-- Nhung doi tuong da co traffic/ads nhung khau sau click van roi rac
-- Uu tien su ro rang, toc do phan hoi va kha nang do luong ROI
+- Khach tham quan muon kham pha to hop MIU SQUARE
+- Doi tac co nhu cau thue gian hang, hop tac kinh doanh, su dung dich vu livestream
+- Brand/seller can mot dia diem co luu luong va he sinh thai ho tro ban hang
+- Nhom nguoi tre uu tien trai nghiem co tinh "check-in", su kien, am thuc, mua sam
 
 ## Dinh huong thi giac
 
-MIU SQUARE nen theo visual language "structured momentum":
+Visual language cua MIU SQUARE theo huong "editorial energy":
 
-- Nen sang, sach, nhieu khoang tho de thong tin de quet nhanh
-- Mau chu dao xanh navy dam de tao tin cay
-- Mau accent xanh mint de goi su tang truong va hanh dong
-- Mot mau coral do-cam de danh CTA chuyen doi
-- Border radius mem vua phai, tranh qua corporate va cung tranh qua playful
-- Hinh khoi card, band thong tin, stat tiles de goi cam giac he thong hoa
+- Nen sang, sach, nhieu khoang tho de ton hinh anh va tieu de lon
+- Mau do thuong hieu dong vai tro dan nhac, khong phu kin toan trang
+- Mau den dam dung cho heading, navigation va cac khoi can cam giac cao cap
+- Cac section dark dung tiet che de tao nhip va nhan vao hero, CTA, highlight band
+- Grid thang, card lon, hinh crop manh, headline ngan va dam
+- Hieu ung chuyen dong gon, dut khoat, khong phu dien
 
 ## Color Palette
 
 | Role | Name | Hex | RGB | Usage |
 |------|------|-----|-----|-------|
-| Primary | Ink Navy | `#102033` | `16, 32, 51` | Nen text chinh, hero overlay, nut secondary dark |
-| Secondary | Steel Blue | `#36506B` | `54, 80, 107` | Headline phu, section title, icon fill |
-| Accent | Growth Mint | `#3ECF8E` | `62, 207, 142` | Highlight, badges, stat positive, UI success-accent |
-| Accent Alt | Signal Coral | `#FF6B57` | `255, 107, 87` | Primary CTA, emphasis, form submit |
-| Neutral | Cloud | `#F5F7FA` | `245, 247, 250` | Nen page, card surface secondary |
-| Neutral | White | `#FFFFFF` | `255, 255, 255` | Card, modal, form surface |
-| Neutral | Slate 600 | `#5B6B7A` | `91, 107, 122` | Body text phu, supporting labels |
-| Neutral | Slate 900 | `#17212B` | `23, 33, 43` | Body text chinh |
-| Error | Alert Red | `#D64545` | `214, 69, 69` | Loi form, destructive warning |
-| Success | Success Green | `#1F9D68` | `31, 157, 104` | Xac nhan gui form, status dat muc tieu |
+| Primary | MIU Red | `#E30613` | `227, 6, 19` | CTA chinh, underline, state active, accent block |
+| Primary Dark | Crimson Press | `#B1000F` | `177, 0, 15` | Hover CTA, gradient stop, dark red surfaces |
+| Neutral | White | `#FFFFFF` | `255, 255, 255` | Nen chinh, form surface, modal surface |
+| Neutral | Ivory Mist | `#F6F3F1` | `246, 243, 241` | Xen ke section, nen card phu |
+| Neutral | Carbon | `#111111` | `17, 17, 17` | Heading, dark bands, nav text |
+| Neutral | Ash | `#5F5A57` | `95, 90, 87` | Body text phu, meta text |
+| Neutral | Stone Line | `#DDD6D1` | `221, 214, 209` | Border, divider, input stroke |
+| Accent | Signal Pink | `#FF6A7A` | `255, 106, 122` | Highlight nho, badge event, hover glow nhe |
+| Accent | Gold Flash | `#F2B544` | `242, 181, 68` | Label su kien, icon nhan manh, micro highlight |
+| Error | Alert Red | `#C62828` | `198, 40, 40` | Form error |
+| Success | Success Green | `#1F8F5F` | `31, 143, 95` | Submit thanh cong, thong bao OK |
 
 ## Ly do chon mau
 
-- `Ink Navy` tao cam giac tin cay va hop voi dich vu lien quan business/performance.
-- `Growth Mint` giup he thong khong qua "ngan hang", dong thoi goi lien tuong toi tang truong.
-- `Signal Coral` giup CTA tach khoi nen navy va neutral rat ro tren mobile.
-- Palette nay de engineer co the phan cap ro rang: trust base + growth accent + action accent.
+- `MIU Red` bam sat brief board va tao do nhan dien manh cho mot thuong hieu giai tri - thuong mai.
+- `Carbon` giup tong the khong bi "re" hoac qua quang cao; no dua website ve cam giac editorial va cao cap hon.
+- `Ivory Mist` giu duoc do am va tach MIU SQUARE khoi kieu giao dien trang-xam qua lanh.
+- `Signal Pink` va `Gold Flash` chi dung lam micro-accent de website co suc song ma van giu do tap trung vao CTA do.
 
 ## Kiem tra contrast
 
-- `#17212B` tren `#FFFFFF`: dat AA cho body text
-- `#FFFFFF` tren `#102033`: dat AA cho CTA dark va hero blocks
-- `#102033` tren `#F5F7FA`: dat AA cho heading
-- `#FF6B57` khong dung cho body text nho tren nen trang; chi dung cho button fill hoac highlight lon
+- `#111111` tren `#FFFFFF`: dat AA cho body text
+- `#FFFFFF` tren `#E30613`: dat AA cho nut CTA chinh
+- `#111111` tren `#F6F3F1`: dat AA cho heading va body
+- `#E30613` khong dung cho body text dai tren nen trang; chi dung cho emphasis, label va action
 
 ## Typography
 
-De uu tien toc do build va tinh san co, de xuat dung font Google Fonts:
+Uu tien font co san tren Google Fonts va ho tro tieng Viet de CTO co the implement ngay.
 
 | Role | Typeface | Weight | Size | Usage |
 |------|----------|--------|------|-------|
-| Heading | Space Grotesk | 500, 700 | 32-56px | Hero headline, section heading, metric emphasis |
-| Body | Manrope | 400, 500, 600 | 14-18px | Paragraph, nav, labels, card copy |
-| Mono | IBM Plex Mono | 500 | 12-14px | Metric chips, tracking labels, micro data |
+| Display / Heading | Be Vietnam Pro | 600, 700, 800 | 32-72px | Hero headline, page title, section heading |
+| Body | Manrope | 400, 500, 600 | 14-18px | Paragraph, nav, card body, form labels |
+| Mono | IBM Plex Mono | 500 | 12-14px | Eyebrow, tag, meta, thong so |
 
 ## Ly do chon type
 
-- `Space Grotesk` tao cam giac modern, cong nghe, nhung van than thien cho SME.
-- `Manrope` doc tot tren mobile, bo chu so dep, hop landing page conversion.
-- `IBM Plex Mono` chi dung rat tiet che de nhan cac label nhu "ROI", "Lead flow", "Auto".
+- `Be Vietnam Pro` co form chu khoe, hien dai, doc tot voi tieng Viet, hop tinh cach tre va nhanh.
+- `Manrope` giu nhat quan doc tren mobile va de dung cho noi dung doi tac/dich vu.
+- `IBM Plex Mono` chi dung rat tiet che cho tag nhu `LIVE`, `NEW`, `ZONE`, `EVENT`.
 
 ## Ty le chu de xuat
 
-- Hero H1: 48/56 desktop, 36/42 tablet, 30/36 mobile
-- Section H2: 32/40 desktop, 28/34 mobile
-- H3/Card title: 20/28
-- Body L: 18/30
-- Body M: 16/26
-- Body S: 14/22
-- Caption: 12/18
+- Hero H1 desktop: `64/68`
+- Hero H1 tablet: `52/58`
+- Hero H1 mobile: `38/44`
+- Page hero H1 trong: `48/54`
+- Section H2: `34/40` desktop, `28/34` mobile
+- Card title H3: `22/28`
+- Body L: `18/30`
+- Body M: `16/26`
+- Body S: `14/22`
+- Meta/eyebrow: `12/18`
 
 ## Logo Usage
 
-Chua co logo chinh thuc. Trong giai doan 1, de xuat wordmark tam thoi:
+Logo goc do board cung cap chua xuat hien trong repo tai thoi diem heartbeat nay, vi vay he thong can cho phep 2 che do:
 
-- Chu `MIU` dam, `SQUARE` medium
-- Dung uppercase
-- Khoang cach ky tu rong nhe (`0.04em`)
-- Co the di kem square mark don gian: mot hinh vuong mo goc + cham nhan o tam
+- `logo-primary`: file logo chinh thuc tren nen sang
+- `logo-inverse`: ban trang hoac backplate cho hero/footer dark
 
-### Quy tac su dung tam thoi
+### Quy tac su dung
 
-- Clear space toi thieu: bang chieu cao ky tu `M`
-- Kich thuoc toi thieu wordmark: 120px tren web
-- Khong them shadow, gradient phuc tap, outline neon
-- Khong dat logo len nen anh phuc tap neu khong co backplate
+- Clear space toi thieu bang chieu cao chu `M`
+- Kich thuoc toi thieu tren web: `132px`
+- Khong them shadow, outline, bevel, gradient vao logo
+- Neu dat tren anh phuc tap, bat buoc co backplate trang hoac den mo 88-92%
+- Favicon/co dau nho neu chua co bo icon thi tam dung chu `M` trong hinh vuong do
 
 ## Iconography
 
-- Style: outline ket hop fill nhe
-- Stroke: 1.75px o kich thuoc co so 24px
-- Grid: 24px
-- Goc bo tron nhe, dong bo voi radius component
-- Uu tien icon the hien quy trinh, tang truong, automation, support, data
+- Style: outline day, bo goc mem nhe, hinh khoi ro
+- Stroke: `1.75px` tren grid `24px`
+- Icon uu tien nhom y nghia: location, event, food, retail, livestream, support, contact
+- Khong dung icon 3D, gradient neon, hoac pictogram qua de thuong
 
 ## Imagery va do hoa
 
-- Khong dung stock photo generic "nguoi chi vao laptop"
-- Neu can anh minh hoa, uu tien:
-- abstract dashboard blocks
-- grid motion
-- screenshots giao dien duoc frame sach
-- gradient mesh rat nhe o hero/background accent
+Website song nhieu bang anh hon bang minh hoa.
+
+- Uu tien anh toan canh khong gian, crowd energy, booths, food, stage, livestream setup
+- Anh can crop manh, co vat the/nhan vat ro, tranh stock photo doanh nghiep generic
+- Co the chen shape do, line grid, so thu tu lon, band editorial de tang nhan dien
+- Background abstract chi dong vai tro phu, khong duoc che mat anh/CTA
 
 ## Tone of Voice
 
-MIU SQUARE noi chuyen nhu mot doi tac van hanh tang truong:
+MIU SQUARE noi chuyen ro, ngan, co luc hut va co tinh moi goi tham gia.
 
-- Ngan, ro, co dong tu hanh dong
-- Noi ve ket qua cu the thay vi slogan mo ho
-- Tranh khoe cong nghe neu no khong gan voi loi ich kinh doanh
+- Uu tien dong tu hanh dong: `Kham pha`, `Ghe tham quan`, `Hop tac`, `Dat lich`, `Xem su kien`
+- Tap trung vao trai nghiem thuc te va gia tri hop tac
+- Tranh cach noi mo ho qua startup hoac qua corporate
 
 ### Tu khoa nen uu tien
 
-- Lead Facebook
-- Tang lead
-- Pipeline do luong duoc
-- Phan hoi nhanh
-- Van hanh gon
-- Chot sale nhanh
-- Theo doi ro rang
-- De scale hon
+- To hop da nang
+- Mua sam - am thuc - vui choi
+- Livestream hub
+- Hop tac kinh doanh
+- Su kien noi bat
+- Trai nghiem tre
+- Diem den cuoi tuan
+- Dat lich tu van
 
 ### Tu khoa nen tranh
 
-- Dot pha cach mang
 - Sieu ung dung
-- All-in-one khong giai thich
-- Leading solution khong co bang chung
+- Nen tang AI
+- Chuyen doi so toan dien
+- Giai phap dot pha khong co bang chung
 
-## Vi du thong diep dung huong
+## Nguyen tac ap dung cho website
 
-- "Bien lead Facebook thanh pipeline chot sale nhanh, khong con roi trong inbox."
-- "Thu lead, phan loai, thong bao cho sale va theo doi conversion trong mot quy trinh co the do luong."
-- "Sua khau chuyen doi va xu ly lead sau ads, khong chi dung lai o giao dien dep."
+- Moi trang phai co 1 diem nhan thi giac ro ngay man hinh dau
+- CTA do khong duoc xuat hien tran lan; chi dat tai vi tri co chu dich
+- Navigation, footer, floating contact phai giu dong bo tren ca 6 route
+- Hinh anh la thanh phan truyen thong chinh; placeholder phai duoc danh dau ro de thay sau
+- Neu copy chua duoc CMO khoa, designer se khoa layout, hierarchy va do dai text toi da truoc
 
-## Vi du thong diep lech huong
+## Asset status hien tai
 
-- "Nen tang cong nghe the he moi cho doanh nghiep tuong lai."
-- "Chung toi mang den he sinh thai ky thuat so toan dien."
+- `Logo chinh thuc`: board noi da gui, nhung chua co file trong repo -> can board/CEO cap lai vao `public/logo/`
+- `Anh hero homepage`: chua co -> dung placeholder photo editorial co tong do/am trong chang 1
+- `Anh zone mua sam/am thuc/vui choi/livestream`: chua co -> dung placeholder co cung style crop va ton mau
+- `Anh bai viet/tin tuc`: dung placeholder card image 4:3 trong chang 1
+- `Map/contact asset`: co the dung block map mock/iframe sau khi CTO scaffold route
 
-## Nguyen tac ap dung cho landing page
+## Cac diem con mo nhung khong chan implementation
 
-- Moi section phai tra loi mot cau hoi cua nguoi mua: day la gi, giup toi gi, co dang tin khong, lam sao bat dau.
-- CTA phai lap lai deu nhung khong doi copy tuy tien.
-- Text block ngan; thong tin duoc chia thanh card, bullet, proof strip va FAQ.
-- Uu tien minh hoa flow lead -> handoff -> dashboard hon la hero kieu stock/agency thong thuong.
-- Thuong hieu phai cho thay MIU SQUARE la "lop chuyen doi + workflow", khong chi la mot agency website.
-
-## Copy lock cho dot 1
-
-- Headline chinh: `Bien lead Facebook thanh pipeline chot sale nhanh, khong con roi trong inbox`
-- Subheadline chinh: `MIU SQUARE giup SME va local business thu lead, phan loai, thong bao cho sale va theo doi conversion trong mot quy trinh co the do luong.`
-- CTA chinh: `Dat lich demo quy trinh`
-- CTA phu: `Nhan tu van giai phap`
-
-## Cac diem con mo, nhung khong chan implementation
-
-- Chua co logo chinh thuc va social proof thuc te
-- Cac use case nganh uu tien co the duoc sap xep lai sau khi co du lieu sales
-- Khi co testimonial/case study that, co the nang cap proof strip thanh social proof section
+- Chua co logo final trong repo
+- Chua co bo anh that theo tung khu
+- CMO chua khoa copy chi tiet cho 6 trang
+- Van co the scaffold layout ngay vi hierarchy, palette, component behavior va asset fallback da duoc khoa

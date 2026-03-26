@@ -1,250 +1,286 @@
-# Landing Page Spec - MIU SQUARE
+# Website Visual Direction va Page Composition - MIU SQUARE
 
-## Muc tieu trang
+## Trang thai
 
-Tao landing page 1 trang de:
+Ten file duoc giu lai vi lich su repo, nhung tai lieu nay khong con la spec landing page 1 trang. Day la handoff visual direction va page composition cho website MIU SQUARE da trang theo brief board trong `ANG-50#document-website-miusquare`.
 
-- Trinh bay MIU SQUARE nhu doi tac tang truong so cho SME/local business
-- Chot ro loi ich trong 5 giay dau
-- Day nguoi dung den CTA de lai thong tin hoac dat lich
-- Tao bo khung san sang mo rong them dashboard/automation flow o dot sau
+## Muc tieu heartbeat
 
-## Trang thai handoff
+Khoa cac quyet dinh de CTO co the build chang 1 ma khong phai doan y:
 
-Spec nay da duoc cap nhat theo:
+- palette do-trang-den va nhan dien tong the
+- composition cho 6 route
+- mapping section/component tai su dung
+- asset nao dung placeholder, asset nao can board cap them
+- note desktop/mobile cho nav, hero, form va floating contact
 
-- Messaging chot trong `docs/LANDING-PAGE-MESSAGING.md`
-- Scope MVP trong `ANG-17#document-scope-mvp`
-- Contract ky thuat trong `docs/contracts/lead-ingestion.md` va `docs/contracts/tracking.md`
+## Route Map da chot
 
-Muc tieu o heartbeat nay la khoa ban handoff cuoi cho implementation dot 1.
+1. `/`
+2. `/ve-miu-square`
+3. `/khu-miu-square`
+4. `/dich-vu`
+5. `/tin-tuc`
+6. `/lien-he`
 
-## Copy lock
+## Visual Direction tong the
 
-- H1: `Bien lead Facebook thanh pipeline chot sale nhanh, khong con roi trong inbox`
-- Subheadline: `MIU SQUARE giup SME va local business thu lead, phan loai, thong bao cho sale va theo doi conversion trong mot quy trinh co the do luong.`
-- CTA chinh: `Dat lich demo quy trinh`
-- CTA phu: `Nhan tu van giai phap`
-- Final CTA heading: `Muon biet lead cua ban dang rot o dau?`
+### Hero direction
 
-## Kien truc noi dung
+- Hero homepage phai toan ban, co hinh anh hoac collage crop manh, overlay toi nhe va heading do lon
+- Tong cam giac: agency/editorial, khoang tho rong, image-led, nhan do ro
+- CTA chinh luon la do, CTA phu la trang/outline
+- Co 1 khoi thong tin nho de nhan vao "to hop da nang + livestream hub" hoac "hop tac kinh doanh"
 
-1. Hero
-2. Van de khach hang dang gap
-3. Cach MIU SQUARE giai quyet
-4. Ket qua va gia tri nhan duoc
-5. Use case phu hop
-6. Lead capture form
-7. FAQ
-8. Footer CTA
+### Page rhythm
 
-## Wireframe Desktop
+- Xen ke giua section sang, alt, va dark band
+- Moi trang co it nhat 1 image-led section va 1 section text-card de giu nhip
+- Khong lap lai cung mot hero layout y nguyen tren ca 6 trang
+- Nav/footer/floating contact dung chung tren toan site
 
-```text
-+----------------------------------------------------------------------------------+
-| LOGO                                   Menu anchors                 CTA button   |
-+----------------------------------------------------------------------------------+
-| HERO LEFT                                              | HERO RIGHT             |
-| Eyebrow                                                | Flow card              |
-| Headline khoa copy                                     | Facebook -> form ->    |
-| Subheadline khoa copy                                  | handoff -> dashboard   |
-| [CTA primary] [CTA secondary]                          |                        |
-| 3 proof bullets ngan                                   |                        |
-+----------------------------------------------------------------------------------+
-| SECTION: Van de hien tai                                                         |
-| 3 cards: Lead vao nhieu kenh / Phan hoi cham / Khong do duoc ROI                 |
-+----------------------------------------------------------------------------------+
-| SECTION: Cach MIU SQUARE giai quyet                                              |
-| 4 flow cards: Thu lead -> Phan loai -> Handoff -> Theo doi                       |
-+----------------------------------------------------------------------------------+
-| SECTION: Ket qua nhan duoc                                                       |
-| 4 outcome tiles: nhanh hon / giam that thoat / minh bach / de scale              |
-+----------------------------------------------------------------------------------+
-| SECTION: Use case phu hop                                                        |
-| 4 cards: Bat dong san / Giao duc / Tham my-F&B / Agency service                  |
-+----------------------------------------------------------------------------------+
-| LEAD FORM BLOCK                                                                  |
-| Left: heading + 3 loi ich             Right: Form (fullName/phone/notes/consent)|
-+----------------------------------------------------------------------------------+
-| FAQ                                                                              |
-| Accordion 4-5 cau hoi                                                            |
-+----------------------------------------------------------------------------------+
-| FINAL CTA BAND                                                                   |
-| Headline + primary CTA + secondary contact                                       |
-+----------------------------------------------------------------------------------+
-| FOOTER                                                                           |
-+----------------------------------------------------------------------------------+
-```
+### Composition formula
 
-## Wireframe Mobile
+- Trang chu: hinh anh + section teaser + CTA hop tac
+- Trang trong gioi thieu: hero noi dung + timeline/value/gallery
+- Trang khu: grid zone + teaser tung khu + gallery
+- Trang dich vu: service blocks + quy trinh + form tu van chinh
+- Trang tin tuc: listing/editorial cards
+- Trang lien he: info + map + form phu
 
-```text
-+--------------------------------------+
-| LOGO                    Menu / CTA   |
-+--------------------------------------+
-| Eyebrow                              |
-| Headline khoa copy                   |
-| Support copy khoa copy               |
-| CTA primary                          |
-| CTA secondary                        |
-| Flow card / image abstraction        |
-+--------------------------------------+
-| Problem card 1                       |
-| Problem card 2                       |
-| Problem card 3                       |
-+--------------------------------------+
-| Heading + copy                       |
-| Flow card 1                          |
-| Flow card 2                          |
-| Flow card 3                          |
-| Flow card 4                          |
-+--------------------------------------+
-| Outcome tiles (scroll stack)         |
-+--------------------------------------+
-| Use case 1                           |
-| Use case 2                           |
-| Use case 3                           |
-| Use case 4                           |
-+--------------------------------------+
-| Lead form intro                      |
-| Input name                           |
-| Input phone                          |
-| Input notes                          |
-| Consent checkbox                     |
-| Submit CTA chinh                     |
-+--------------------------------------+
-| FAQ accordion                        |
-+--------------------------------------+
-| Final CTA band                       |
-+--------------------------------------+
-```
+## Shared Sections va Components
 
-## Mockup Direction
+| ID | Thanh phan | Tai su dung o dau | Ghi chu build |
+|----|------------|-------------------|---------------|
+| `site-nav` | Nav sticky | 6/6 trang | Desktop menu + mobile drawer |
+| `page-hero` | Hero trong | 5 trang trong | Co 3 bien the: image-right, image-full, text-left |
+| `home-hero` | Hero trang chu | `/` | Bien the rieng, uu tien full-bleed |
+| `section-header` | Eyebrow + heading + intro | Nhieu trang | Tach rieng de copy thay sau |
+| `feature-card` | Card noi dung co icon/so | `/`, `/dich-vu`, `/ve-miu-square` | 3-4 cot desktop |
+| `image-tile` | O anh + label | `/`, `/khu-miu-square`, `/tin-tuc` | Dung cho placeholder va asset final |
+| `editorial-band` | Section dark/highlight | `/`, `/dich-vu`, `/lien-he` | CTA hoac quote band |
+| `service-process` | Step/timeline | `/dich-vu` | 3-5 buoc |
+| `consultation-form` | Form tu van chinh | `/dich-vu` | Form quan trong nhat |
+| `contact-panel` | Box lien he nhanh | `/lien-he`, footer | Gom dia chi, phone, social |
+| `news-card` | Bai viet/event card | `/`, `/tin-tuc` | Ty le 4:3 |
+| `quick-contact` | Floating contact | 6/6 trang | Messenger, Zalo, WhatsApp |
+| `site-footer` | Footer | 6/6 trang | Link + contact + policy |
 
-## Hero
+## Page Composition chi tiet
 
-- Nen navy dam voi mot lop gradient chuyen rat nhe sang xanh steel
-- Ben trai la copy khoa theo messaging, ben phai la mot flow card mo ta "lead vao -> handoff -> dashboard"
-- Co 1 stat chip mau mint va 1 CTA coral de tao tam diem
-- Hero khong dung anh stock; chi dung card UI abstraction
+### 1. Trang chu `/`
 
-## Section styles
+Muc tieu: gioi thieu tong quan MIU SQUARE, tao an tuong thi giac va dieu huong nguoi dung den cac khu chinh hoac CTA hop tac.
 
-- Section sang/toi xen ke de tao nhip cuon trang
-- Problem section: nen trang, card border mo, icon outline
-- Solution section: card surface trang tren background cloud
-- Lead form section: background navy, form card trang de tang contrast
-- Final CTA band: nen coral/gradient coral-navy nhung copy van phai de doc
+#### Section order
 
-## Component hierarchy
+1. `home-hero`
+2. `destination-intro`
+3. `zone-teaser-grid`
+4. `livestream-highlight`
+5. `event-promo-strip`
+6. `services-teaser`
+7. `news-teaser`
+8. `final-cta-band`
 
-- CTA chinh luon coral
-- CTA phu la outline/trang
-- Badge/eyebrow luon dung mint hoac navy nhat quan
-- Metric number co the dung Space Grotesk dam + mono prefix nho
-- H1/H2 phai giu dung structure thong diep "van de -> giai phap -> ket qua"
+#### Composition notes
 
-## Noi dung tung section
+- `home-hero`: desktop 2 lop, nen anh full-bleed; mobile stack text len tren anh 56-64vh
+- `destination-intro`: 2 cot, trai la intro MIU SQUARE, phai la 2 stat/USP cards
+- `zone-teaser-grid`: 4 card cho Mua sam, Am thuc, Vui choi, Livestream Hub
+- `livestream-highlight`: section dark voi 1 anh lon + 2-3 bullet loi ich
+- `event-promo-strip`: carousel hoac horizontal cards, neu chua code carousel thi dung grid ngang snap
+- `services-teaser`: teaser ve thue gian hang, livestream support, hop tac brand
+- `news-teaser`: 3 `news-card`
+- `final-cta-band`: CTA `Tu van hop tac` + thong tin contact nhanh
 
-### 1. Hero
+### 2. Trang `/ve-miu-square`
 
-- Eyebrow de xuat: `Lead Facebook -> pipeline do luong duoc`
-- Headline: `Bien lead Facebook thanh pipeline chot sale nhanh, khong con roi trong inbox`
-- Subcopy: `MIU SQUARE giup SME va local business thu lead, phan loai, thong bao cho sale va theo doi conversion trong mot quy trinh co the do luong.`
-- CTA chinh: `Dat lich demo quy trinh`
-- CTA phu: `Nhan tu van giai phap`
-- Proof bullets:
-- `Thu lead tap trung tu landing page va Facebook`
-- `Thong bao va handoff cho sale nhanh`
-- `Theo doi conversion trong mot quy trinh do luong duoc`
+Muc tieu: xay dung tin cay ve thuong hieu, tam nhin va khong gian.
 
-### 2. Van de hien tai
+#### Section order
 
-Muc dich: goi dung pain point truoc khi ban giai phap.
+1. `page-hero`
+2. `brand-story`
+3. `vision-values`
+4. `facility-gallery`
+5. `why-miu-square`
+6. `final-cta-band`
 
-- Lead vao nhieu kenh nen phan hoi cham
-- Sale bo sot lead nong do xu ly tay va roi rac
-- Chu doanh nghiep khong thay duoc ROI that sau khi da do tien vao ads
+#### Composition notes
 
-### 3. Giai phap
+- `page-hero`: hero image-right hoac full-width image voi overlay text trai
+- `brand-story`: layout editorial 2 cot, copy trai, anh/doc quote phai
+- `vision-values`: 3-4 `feature-card`
+- `facility-gallery`: masonry nhe hoac asymmetrical grid 2-3 ty le anh
+- `why-miu-square`: bullet value cho khach tham quan va doi tac
 
-4 card de xuat theo flow:
+### 3. Trang `/khu-miu-square`
 
-- Thu lead tap trung
-- Phan loai va day thong bao
-- Handoff sale nhanh
-- Theo doi trang thai va conversion tren dashboard
+Muc tieu: trinh bay cac khu chuc nang trong to hop, giup nguoi dung hieu tung zone va dieu huong sang hop tac/tham quan.
 
-### 4. Proof / Loi ich
+#### Section order
 
-Noi ve outcome, khong noi feature:
+1. `page-hero`
+2. `zone-overview-index`
+3. `shopping-zone`
+4. `food-zone`
+5. `entertainment-zone`
+6. `livestream-hub-zone`
+7. `visit-or-partner-cta`
 
-- Rut ngan thoi gian phan hoi lead
-- Giam that thoat lead trong follow-up
-- Minh bach hoa quy trinh marketing -> sale
-- Tao nen tang de scale ads ma khong tang chaos van hanh
+#### Composition notes
 
-### 5. Use case phu hop
+- `zone-overview-index`: 4 tile anchor den tung khu
+- Moi zone section theo cong thuc:
+- anh hero nho
+- heading + intro
+- 3 diem noi bat hoac 3 the tile
+- 1 CTA phu `Xem dich vu lien quan` hoac `Lien he hop tac`
+- `livestream-hub-zone` duoc uu tien mot dark band hoac do nhe de tao khac biet
 
-- Bat dong san
-- Giao duc
-- Tham my va F&B
-- Agency service
+### 4. Trang `/dich-vu`
 
-### 6. Lead form
+Muc tieu: day la trang conversion chinh, giai thich dich vu va chot form tu van.
 
-Field MVP theo contract:
+#### Section order
 
-- `fullName`
-- `phone`
-- `notes`
-- `consent.marketing`
+1. `page-hero`
+2. `service-categories`
+3. `partnership-benefits`
+4. `service-process`
+5. `stall-rental-options`
+6. `consultation-form`
+7. `faq-lite`
+8. `final-cta-band`
 
-Field mo rong neu backend/frontend chot them o dot sau:
+#### Composition notes
 
-- `email`
-- metadata UTM an
+- `page-hero`: hinh anh hoac collage dich vu, CTA chinh dua thang xuong form
+- `service-categories`: 4 card cho setup livestream, fanpage, quang cao, dong goi-ship
+- `partnership-benefits`: 2 cot, bullet ben trai, image/stat ben phai
+- `service-process`: 4 step dat ngang desktop, stack mobile
+- `stall-rental-options`: 3 card package hoac space types
+- `consultation-form`: section quan trong nhat, background alt hoac dark + card trang noi bat
+- `faq-lite`: 4-5 accordion ngan, tranh dua copy dai
 
-Button submit:
+### 5. Trang `/tin-tuc`
 
-- `Dat lich demo quy trinh`
+Muc tieu: tao cam giac website dang van hanh song dong va co noi dung/su kien cap nhat.
 
-### 7. FAQ
+#### Section order
 
-FAQ de xuat:
+1. `page-hero`
+2. `featured-story`
+3. `news-grid`
+4. `event-list-strip`
+5. `newsletter-or-contact-cta`
 
-- Bao lau de co landing page ban dau?
-- Toi da co nguoi chay ads roi, MIU SQUARE giup them gi?
-- Toi da co CRM roi, co can them MIU SQUARE khong?
-- Setup co phuc tap khong?
+#### Composition notes
 
-## Interaction Notes
+- `featured-story`: 1 bai noi bat tren cung voi anh lon
+- `news-grid`: 6-9 `news-card`, chang 1 co the la du lieu seed
+- `event-list-strip`: cards ngang cho su kien sap toi
+- Neu chua co CMS, phai seed bang du lieu mock nhat quan ve format va tone
 
-- CTA sticky o mobile sau khi user scroll qua hero la khuyen nghi nen co
-- Form submit state dung inline success theo scope MVP, khong can page rieng
-- FAQ mo dong mem, khong lam giat layout qua manh
-- Nav anchor scroll muot nhung van ton trong reduced-motion
+### 6. Trang `/lien-he`
 
-## Implementation Notes cho Engineer
+Muc tieu: dua nguoi dung den cac kenh lien lac va form lien he mot cach ro rang, nhanh.
 
-- Build page theo section-based layout, moi section la 1 component doc lap
-- Tach content copy khoi presentation de cap nhat sau nay de dang
-- Uu tien mobile-first vi traffic tu ads co kha nang den tu dien thoai
-- Hero mockup co the dung CSS cards thay vi anh
-- Form area can du cho validation va thank-you state
-- Su dung `form_id=\"hero-lead-form\"` hoac `primary-lead-form` nhat quan giua UI va tracking
+#### Section order
 
-## Event mapping cho MVP
+1. `page-hero`
+2. `contact-methods`
+3. `map-and-location`
+4. `contact-form-secondary`
+5. `recruitment-or-business-note`
 
-| Hanh vi UI | Event contract hien tai | Properties toi thieu |
-|------------|--------------------------|----------------------|
-| Vao trang | `page_view` | `page`, `campaign.*` |
-| Click CTA hero/final | `cta_clicked` | `cta_label`, `section_id`, `page` |
-| Form vao viewport hoac focus lan dau | `lead_form_viewed` | `form_id`, `section_id` |
-| Submit thanh cong | `lead_form_submitted` | `form_id`, `submission_status` |
-| Validate/submit loi | `lead_form_failed` | `form_id`, `field` hoac `submission_status` |
+#### Composition notes
 
-## Dependency con lai
+- `contact-methods`: 3-4 card cho phone, email, Messenger, dia chi
+- `map-and-location`: desktop 2 cot, mobile stack
+- `contact-form-secondary`: nhe hon form trang dich vu; dung cho lien he tong quat
+- `recruitment-or-business-note`: text strip nho o cuoi trang
 
-- Social proof, testimonial, case study that
-- Logo chinh thuc neu board muon nang cap thuong hieu sau MVP
+## Desktop va Mobile states can khoa
+
+### Nav
+
+- Desktop: menu ngang day du + CTA hop tac
+- Mobile: drawer fullscreen; CTA lap lai trong drawer; quick contact van hien
+
+### Hero
+
+- Desktop:
+- homepage uu tien 55/45 hoac full-bleed
+- page trong uu tien 50/50 text-image
+- Mobile:
+- text len truoc, anh xuong sau neu hero chia cot
+- heading khong vuot qua 4 dong
+- CTA stack doc neu co 2 nut
+
+### Grid
+
+- Desktop: 3-4 cot tuy section
+- Tablet: 2 cot
+- Mobile: 1 cot cho service/news; 2 cot chi dung voi card rat ngan
+
+### Floating contact
+
+- Desktop: hien tooltip label khi hover
+- Mobile: icon-only, size lon de bam, cach sticky CTA toi thieu `16px`
+
+### Form
+
+- Desktop: 2 cot cho field ngan, submit full width hoac canh trai ro rang
+- Mobile: 1 cot, sticky submit khong can; field cach nhau `16px`
+- Success state inline, khong redirect chang 1
+
+## Asset Mapping
+
+| Khu vuc | Asset can co | Trang thai hien tai | Xu ly chang 1 |
+|--------|---------------|---------------------|---------------|
+| Shared nav/footer | Logo chinh thuc | Chua co file trong repo | Dung wordmark fallback, cho board cap file |
+| Homepage hero | 1-2 anh hero tong quan | Chua co | Dung placeholder editorial ton do/trang |
+| Zone teasers | 4 anh dai dien khu | Chua co | Dung placeholder theo tung chu de |
+| Ve MIU SQUARE | 3-5 anh khong gian/co so vat chat | Chua co | Dung gallery placeholder cung style |
+| Khu MIU SQUARE | 1 anh/zone + 1 detail/zone | Chua co | Dung placeholder co label asset key |
+| Dich vu | 2-4 anh dich vu/livestream/partner | Chua co | Dung placeholder/grid do hoa |
+| Tin tuc | Thumbnail bai viet/su kien | Chua co | Seed mock image 4:3 |
+| Lien he | Ban do/anh mat tien | Chua co | Dung block map placeholder + text |
+
+## Asset board can cap them
+
+- Logo chinh thuc PNG/SVG nen trong
+- Bo anh that cho homepage hero
+- It nhat 1 anh cho moi zone: mua sam, am thuc, vui choi, livestream
+- Anh co so vat chat/khong gian cho trang gioi thieu
+- Anh mat bang/mat tien neu muon tang do tin cay trang lien he
+
+## Placeholder rules
+
+- Placeholder phai dong bo cung mot style crop, saturation, contrast
+- Khong mix stock photo qua nhieu phong cach
+- Tren moi asset placeholder quan trong, luu key ro trong content/data de thay sau
+- Neu chua co anh that, uu tien layout song bang shape + block mau + label hon la anh kem chat luong
+
+## Tracking va CTA placement can giu
+
+- CTA chinh xuat hien o homepage hero, `/dich-vu`, va final CTA bands
+- Floating contact hien dien toan site
+- Form tu van chinh chi co 1 ban tren `/dich-vu`
+- Form/CTA phu o trang khac chi nen dan ve `/dich-vu` hoac mo kenh lien he nhanh
+
+## Handoff quyet dinh cho CTO
+
+- Scaffold route shell cho 6 trang truoc khi noi copy chi tiet
+- Uu tien build shared layout + hero variants + card primitives + consultation form + floating contact
+- Dung data seed/mock data theo dung section order o tai lieu nay
+- Chua co asset final thi van phai giu dung ti le khung anh va khoang trang de board duyet bo cuc
+- Khong can cho CMS moi bat dau chang 1
+
+## Phu thuoc con mo
+
+- Copy chi tiet tung trang do CMO khoa o issue rieng
+- Asset final chua vao repo
+- Co the tiep tuc implementation ngay vi hierarchy, states, va route composition da du ro
