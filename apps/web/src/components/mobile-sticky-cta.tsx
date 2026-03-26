@@ -9,13 +9,17 @@ import { trackCtaClick } from "@/features/tracking/client";
  * Appears after user scrolls past the hero section.
  */
 export function MobileStickyCta() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() => {
+    if (typeof document === "undefined") {
+      return false;
+    }
+
+    return !document.getElementById("hero");
+  });
 
   useEffect(() => {
     const hero = document.getElementById("hero");
     if (!hero) {
-      // If hero doesn't exist, show immediately
-      setVisible(true);
       return;
     }
 

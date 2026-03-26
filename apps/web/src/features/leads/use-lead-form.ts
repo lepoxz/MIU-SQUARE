@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import type { LeadFormData, LeadFormFieldErrors } from "./form-schema";
+import type { LeadFormFieldErrors } from "./form-schema";
 import { validateLeadForm } from "./form-schema";
 import type { LeadResponse } from "./contracts";
 import { trackFormSubmitted, trackFormFailed } from "@/features/tracking/client";

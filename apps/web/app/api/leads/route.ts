@@ -3,13 +3,26 @@ import { ZodError } from "zod";
 import { createLeadTraceId, leadPayloadSchema, leadResponseSchema } from "@/features/leads/contracts";
 import { logger } from "@/lib/logger";
 
+export function maskPhoneForLog(phone: string) {
+  const trimmed = phone.trim();
+
+  if (trimmed.length <= 4) {
+    return "*".repeat(trimmed.length);
+  }
+
+  return `${"*".repeat(trimmed.length - 4)}${trimmed.slice(-4)}`;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const payload = leadPayloadSchema.parse(body);
     const traceId = createLeadTraceId();
 
-    logger.info({ traceId, source: payload.source, phone: payload.phone }, "lead accepted");
+    logger.info(
+      { traceId, source: payload.source, phone: maskPhoneForLog(payload.phone) },
+      "lead accepted"
+    );
 
     // TODO: persist to database when Prisma is wired (ANG tech-debt)
     // TODO: forward to n8n webhook for workflow orchestration
